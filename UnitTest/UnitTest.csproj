@@ -55,7 +55,9 @@
     <Compile Include="CompanyTests\DummyCompanyView.cs" />
     <Compile Include="CompanyTests\CompanyViewTest.cs" />
     <Compile Include="CompanyTests\CompanyDetailViewTest.cs" />
+    <Compile Include="EmployeeTests\DummyEmployeeDetailView.cs" />
     <Compile Include="EmployeeTests\DummyEmployeeRepository.cs" />
+    <Compile Include="EmployeeTests\EmployeeDetailViewTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

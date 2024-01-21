@@ -222,9 +222,12 @@
             // 
             // grdEmployees
             // 
+            this.grdEmployees.AllowUserToAddRows = false;
+            this.grdEmployees.AllowUserToDeleteRows = false;
             this.grdEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEmployees.Location = new System.Drawing.Point(13, 74);
             this.grdEmployees.Name = "grdEmployees";
+            this.grdEmployees.ReadOnly = true;
             this.grdEmployees.Size = new System.Drawing.Size(412, 300);
             this.grdEmployees.TabIndex = 0;
             // 

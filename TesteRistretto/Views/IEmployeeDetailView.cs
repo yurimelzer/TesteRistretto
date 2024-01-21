@@ -27,5 +27,6 @@ namespace TesteRistretto.Views
 
         void SetCompaniesListDataSource(IEnumerable<Company> companiesList);
         DialogResult ShowDialog();
+        void Close();
     }
 }

@@ -12,7 +12,7 @@ namespace TesteRistretto.Repositories
     {
         public List<Employee> GetAllEmployees()
         {
-            string query = "SELECT EmployeeId, EmployeeName, Email, CompanyPosition "
+            string query = "SELECT EmployeeId, EmployeeName, Email, CompanyPosition, "
                          + " Login, Password, CompanyId, Situation "
                          + " FROM Employee ";
 
@@ -21,7 +21,7 @@ namespace TesteRistretto.Repositories
 
         public List<Employee> GetAllEmployeesByCompany(int companyId)
         {
-            string query = "SELECT EmployeeId, EmployeeName, Email, CompanyPosition "
+            string query = "SELECT EmployeeId, EmployeeName, Email, CompanyPosition, "
                          + " Login, Password, CompanyId, Situation "
                          + " FROM Employee "
                          + " WHERE CompanyId = @companyId";
@@ -36,7 +36,7 @@ namespace TesteRistretto.Repositories
 
         public Employee GetEmployeeById(int employeeId)
         {
-            string query = "SELECT EmployeeId, EmployeeName, Email, CompanyPosition "
+            string query = "SELECT EmployeeId, EmployeeName, Email, CompanyPosition, "
                          + " Login, Password, CompanyId, Situation "
                          + " FROM Employee "
                          + " Where EmployeeId = @employeeId";
@@ -72,8 +72,8 @@ namespace TesteRistretto.Repositories
         public int UpdateEmployee(Employee employee)
         {
             string query = "Update Employee set EmployeeName = @employeeName, "
-                         + " Email = @email, CompanyPosition = @companyPosition "
-                         + " Login = @login, Password = @password, CompanyId = @companyId "
+                         + " Email = @email, CompanyPosition = @companyPosition, "
+                         + " Login = @login, Password = @password, CompanyId = @companyId, "
                          + " Situation = @situation "
                          + " where EmployeeId = @employeeId";
 
@@ -120,9 +120,9 @@ namespace TesteRistretto.Repositories
                 Email = reader[emailOrdinal] is DBNull ? string.Empty : reader.GetString(emailOrdinal),
                 CompanyPosition = reader[companyPositionOrdinal] is DBNull ? string.Empty : reader.GetString(companyPositionOrdinal),
                 Login = reader[loginOrdinal] is DBNull ? string.Empty : reader.GetString(loginOrdinal),
-                Password = reader[passwordOrdinal] is DBNull ? default(byte) : reader.GetByte(passwordOrdinal),
+                Password = reader[passwordOrdinal] is DBNull ? string.Empty : reader.GetString(passwordOrdinal),
                 CompanyId = reader[companyIdOrdinal] is DBNull ? default(int) : reader.GetInt32(companyIdOrdinal),
-                Situation = reader[situationOrdinal] is DBNull ? default(Situation) : (Situation)reader.GetInt16(situationOrdinal),
+                Situation = reader[situationOrdinal] is DBNull ? default(Situation) : (Situation)Convert.ToInt16(reader.GetValue(situationOrdinal))
             };
 
             return employee;

@@ -40,6 +40,8 @@ namespace TesteRistretto.Presenters
 
             this.view.SaveEvent += SaveCompany;
 
+            this.view.SetEmployeeBindingSource(employeeBindingSource);
+
             LoadCompanyInfo();
             LoadEmployees();
 

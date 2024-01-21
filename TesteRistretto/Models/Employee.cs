@@ -13,7 +13,7 @@ namespace TesteRistretto.Models
         public string Email { get; set; }
         public string CompanyPosition { get; set; }
         public string Login { get; set; }
-        public byte Password { get; set; } 
+        public string Password { get; set; } 
         public int CompanyId { get; set; }
         public Situation Situation { get; set; }
     }
