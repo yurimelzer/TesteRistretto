@@ -56,20 +56,38 @@ namespace TesteRistretto.Presenters
             ICompanyDetailView view = new CompanyDetailView();
             IEmployeeRepository employeeRepository = new EmployeeRepository();
 
-            Company company = (Company)companyBindingSource.Current;
+            Company company = (Company)this.companyBindingSource.Current;
+
+            if (company is null)
+            {
+                this.view.IsSuccessful = false;
+                this.view.Message = "Não há registros a serem editados!";
+                return;
+            };
 
             new CompanyDetailPresenter(view, this.repository, employeeRepository, company);
 
             LoadCompanies();
 
             this.view.RefreshGrid();
+
+            this.view.IsSuccessful = true;
         }
 
         private void DeleteCompany(object sender, EventArgs e)
         {
             Company company = (Company)companyBindingSource.Current;
 
-            repository.DeleteCompany(company.CompanyId);
+            if (company is null)
+                company = new Company();
+
+            this.view.IsSuccessful = repository.DeleteCompany(company.CompanyId);
+
+            if (!this.view.IsSuccessful)
+            {
+                this.view.Message = "Empresa não foi deletada!";
+                return;
+            }
 
             LoadCompanies();
 

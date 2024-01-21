@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,9 +13,7 @@ namespace TesteRistretto.Views
 {
     public partial class CompanyView : Form, ICompanyView
     {
-        private bool isEdit;
         private bool isSucessful;
-        private string message;
 
         public CompanyView()
         {
@@ -32,9 +31,20 @@ namespace TesteRistretto.Views
 
         public int GridCompanyCount { get => grdCompanies.RowCount; }
 
-        public bool IsEdit { get => isEdit; set => isEdit = value; }
-        public bool IsSuccessful { get => isSucessful; set => isSucessful = value; }
-        public string Message { get => message; set => message = value; }
+        public bool IsSuccessful 
+        {
+            get
+            {
+                return isSucessful;
+            }
+            set
+            {
+                lblMessage.ForeColor = value ? Color.Green : Color.Red;
+                lblMessage.Text = value ? string.Empty : lblMessage.Text;
+                isSucessful = value;
+            }
+        }
+        public string Message { get => lblMessage.Text; set => lblMessage.Text = value; }
 
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;

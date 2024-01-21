@@ -33,6 +33,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdCompanies)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +85,20 @@
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(13, 50);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 5;
+            // 
             // CompanyView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
@@ -111,5 +121,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblMessage;
     }
 }
