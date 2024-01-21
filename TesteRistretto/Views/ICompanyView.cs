@@ -9,6 +9,8 @@ namespace TesteRistretto.Views
 {
     public interface ICompanyView
     {
+        int GridCompanyCount { get; }
+
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }
         string Message { get; set; }
@@ -18,5 +20,6 @@ namespace TesteRistretto.Views
         event EventHandler DeleteEvent;
 
         void SetCompaniesListBindingSource(BindingSource bindingSource);
+        void RefreshGrid();
     }
 }

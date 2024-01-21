@@ -50,6 +50,7 @@
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Enumerations.cs" />
+    <Compile Include="Presenters\CompanyDetailPresenter.cs" />
     <Compile Include="Presenters\CompanyPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,12 +59,19 @@
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\ICompanyRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Views\CompanyDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CompanyDetailView.Designer.cs">
+      <DependentUpon>CompanyDetailView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CompanyView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CompanyView.Designer.cs">
       <DependentUpon>CompanyView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ICompanyDetailView.cs" />
     <Compile Include="Views\ICompanyView.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +82,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\CompanyDetailView.resx">
+      <DependentUpon>CompanyDetailView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CompanyView.resx">
       <DependentUpon>CompanyView.cs</DependentUpon>
     </EmbeddedResource>

@@ -19,6 +19,8 @@ namespace TesteRistretto.Views
         public CompanyView()
         {
             InitializeComponent();
+
+            WireViewEvents();
         }
 
         public void WireViewEvents()
@@ -28,6 +30,8 @@ namespace TesteRistretto.Views
             btnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
         }
 
+        public int GridCompanyCount { get => grdCompanies.RowCount; }
+
         public bool IsEdit { get => isEdit; set => isEdit = value; }
         public bool IsSuccessful { get => isSucessful; set => isSucessful = value; }
         public string Message { get => message; set => message = value; }
@@ -35,6 +39,11 @@ namespace TesteRistretto.Views
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
+
+        public void RefreshGrid()
+        {
+            grdCompanies.Refresh();
+        }
 
         public void SetCompaniesListBindingSource(BindingSource bindingSource)
         {

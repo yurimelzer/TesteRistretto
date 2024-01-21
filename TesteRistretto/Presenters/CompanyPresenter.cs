@@ -42,17 +42,38 @@ namespace TesteRistretto.Presenters
 
         private void AddCompany(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ICompanyDetailView view = new CompanyDetailView();
+            IEmployeeRepository employeeRepository = new EmployeeRepository();
+            new CompanyDetailPresenter(view, this.repository, employeeRepository, new Company());
+
+            LoadCompanies();
+
+            this.view.RefreshGrid();
         }
 
         private void EditCompany(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ICompanyDetailView view = new CompanyDetailView();
+            IEmployeeRepository employeeRepository = new EmployeeRepository();
+
+            Company company = (Company)companyBindingSource.Current;
+
+            new CompanyDetailPresenter(view, this.repository, employeeRepository, company);
+
+            LoadCompanies();
+
+            this.view.RefreshGrid();
         }
 
         private void DeleteCompany(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Company company = (Company)companyBindingSource.Current;
+
+            repository.DeleteCompany(company.CompanyId);
+
+            LoadCompanies();
+
+            this.view.RefreshGrid();
         }
     }
 }
