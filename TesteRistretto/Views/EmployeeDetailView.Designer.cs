@@ -58,7 +58,7 @@
             this.label1.Location = new System.Drawing.Point(13, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Codigo do Funcionário";
             // 
             // label2
@@ -69,7 +69,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 9;
             this.label2.Text = "Nome";
             // 
             // label3
@@ -80,7 +80,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 11;
             this.label3.Text = "E-mail";
             // 
             // label4
@@ -91,7 +91,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 5;
             this.label4.Text = "Cargo";
             // 
             // label5
@@ -102,7 +102,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 13;
             this.label5.Text = "Login";
             // 
             // label6
@@ -113,7 +113,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 3;
             this.label6.Text = "Empresa";
             // 
             // label7
@@ -124,7 +124,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 13);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 15;
             this.label7.Text = "Senha";
             // 
             // label8
@@ -144,7 +144,7 @@
             this.cmbCompany.Location = new System.Drawing.Point(16, 121);
             this.cmbCompany.Name = "cmbCompany";
             this.cmbCompany.Size = new System.Drawing.Size(273, 21);
-            this.cmbCompany.TabIndex = 8;
+            this.cmbCompany.TabIndex = 4;
             // 
             // txtEmployeeId
             // 
@@ -152,7 +152,7 @@
             this.txtEmployeeId.Name = "txtEmployeeId";
             this.txtEmployeeId.ReadOnly = true;
             this.txtEmployeeId.Size = new System.Drawing.Size(273, 20);
-            this.txtEmployeeId.TabIndex = 9;
+            this.txtEmployeeId.TabIndex = 2;
             // 
             // txtEmployeeName
             // 
@@ -166,21 +166,21 @@
             this.txtEmail.Location = new System.Drawing.Point(310, 122);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(279, 20);
-            this.txtEmail.TabIndex = 11;
+            this.txtEmail.TabIndex = 12;
             // 
             // txtCompanyPosition
             // 
             this.txtCompanyPosition.Location = new System.Drawing.Point(15, 171);
             this.txtCompanyPosition.Name = "txtCompanyPosition";
             this.txtCompanyPosition.Size = new System.Drawing.Size(274, 20);
-            this.txtCompanyPosition.TabIndex = 12;
+            this.txtCompanyPosition.TabIndex = 6;
             // 
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(310, 171);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(279, 20);
-            this.txtLogin.TabIndex = 13;
+            this.txtLogin.TabIndex = 14;
             // 
             // cmbSituation
             // 
@@ -188,14 +188,14 @@
             this.cmbSituation.Location = new System.Drawing.Point(15, 220);
             this.cmbSituation.Name = "cmbSituation";
             this.cmbSituation.Size = new System.Drawing.Size(274, 21);
-            this.cmbSituation.TabIndex = 15;
+            this.cmbSituation.TabIndex = 8;
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(514, 340);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 16;
+            this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
@@ -206,7 +206,7 @@
             this.label9.Location = new System.Drawing.Point(12, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(249, 24);
-            this.label9.TabIndex = 17;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Funcionários - Detalhes";
             // 
             // lblMessage
@@ -215,7 +215,7 @@
             this.lblMessage.Location = new System.Drawing.Point(13, 260);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblMessage.TabIndex = 18;
+            this.lblMessage.TabIndex = 20;
             // 
             // label10
             // 
@@ -225,7 +225,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 13);
-            this.label10.TabIndex = 19;
+            this.label10.TabIndex = 17;
             this.label10.Text = "Confirmar Senha";
             // 
             // txtConfirmationPassword
@@ -234,7 +234,7 @@
             this.txtConfirmationPassword.Name = "txtConfirmationPassword";
             this.txtConfirmationPassword.PasswordChar = '*';
             this.txtConfirmationPassword.Size = new System.Drawing.Size(278, 20);
-            this.txtConfirmationPassword.TabIndex = 20;
+            this.txtConfirmationPassword.TabIndex = 18;
             // 
             // txtPassword
             // 
@@ -242,7 +242,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(278, 20);
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 16;
             // 
             // EmployeeDetailView
             // 
@@ -270,7 +270,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EmployeeDetailView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Teste Ristretto";
             this.ResumeLayout(false);
             this.PerformLayout();

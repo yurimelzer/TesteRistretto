@@ -76,7 +76,13 @@ namespace TesteRistretto.Presenters
         private void AddEmployee(object sender, EventArgs e)
         {
             IEmployeeDetailView view = new EmployeeDetailView();
-            new EmployeeDetailPresenter(view, employeeRepository, companyRepository, new Employee());
+            new EmployeeDetailPresenter(view, employeeRepository, companyRepository, new Employee() { CompanyId = company.CompanyId });
+
+            LoadEmployees();
+
+            this.view.RefreshGrid();
+
+            this.view.IsSuccessful = true;
         }
 
         private void EditEmployee(object sender, EventArgs e)
@@ -94,6 +100,8 @@ namespace TesteRistretto.Presenters
             new EmployeeDetailPresenter(view, employeeRepository, companyRepository, employee);
 
             LoadEmployees();
+
+            this.view.RefreshGrid();
 
             this.view.IsSuccessful = true;
         }
@@ -114,6 +122,10 @@ namespace TesteRistretto.Presenters
             }
 
             LoadEmployees();
+
+            this.view.RefreshGrid();
+
+            this.view.IsSuccessful = true;
         }
 
         private void SaveCompany(object sender, EventArgs e)
