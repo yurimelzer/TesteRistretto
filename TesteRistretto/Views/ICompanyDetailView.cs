@@ -14,6 +14,8 @@ namespace TesteRistretto.Views
         string ContactNumber { get; set; }
         string CompanyUrl { get; set; }
 
+        int GridEmployeeCount { get; }
+
         bool IsSuccessful { get; set; }
         string Message { get; set; }
 

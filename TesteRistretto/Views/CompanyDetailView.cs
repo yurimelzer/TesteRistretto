@@ -14,7 +14,6 @@ namespace TesteRistretto.Views
     public partial class CompanyDetailView : Form, ICompanyDetailView
     {
         private bool isSucessful;
-        private string message;
 
         public CompanyDetailView()
         {
@@ -37,8 +36,21 @@ namespace TesteRistretto.Views
         string ICompanyDetailView.ContactNumber { get => txtContactNumber.Text; set => txtContactNumber.Text = value; }
         string ICompanyDetailView.CompanyUrl { get => txtUrl.Text; set => txtUrl.Text = value; }
 
-        public bool IsSuccessful { get => isSucessful; set => isSucessful = value; }
-        public string Message { get => message; set => message = value; }
+        public int GridEmployeeCount => grdEmployees.RowCount;
+
+        public bool IsSuccessful
+        {
+            get
+            {
+                return isSucessful;
+            }
+            set
+            {
+                lblMessage.ForeColor = value ? Color.Green : Color.Red;
+                isSucessful = value;
+            }
+        }
+        public string Message { get => lblMessage.Text; set => lblMessage.Text = value; }
 
         public event EventHandler AddEmployeeEvent;
         public event EventHandler EditEmployeeEvent;

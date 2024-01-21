@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCompanyId = new System.Windows.Forms.MaskedTextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.txtContactNumber = new System.Windows.Forms.MaskedTextBox();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
@@ -38,14 +41,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnEditEmployee = new System.Windows.Forms.Button();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.grdEmployees = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.lblValidationMessage = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCompanyId = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmployees)).BeginInit();
@@ -65,7 +65,7 @@
             // 
             this.panel1.Controls.Add(this.txtCompanyId);
             this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.lblValidationMessage);
+            this.panel1.Controls.Add(this.lblMessage);
             this.panel1.Controls.Add(this.txtContactNumber);
             this.panel1.Controls.Add(this.txtUrl);
             this.panel1.Controls.Add(this.txtCompanyName);
@@ -77,6 +77,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(304, 390);
             this.panel1.TabIndex = 3;
+            // 
+            // txtCompanyId
+            // 
+            this.txtCompanyId.AsciiOnly = true;
+            this.txtCompanyId.Location = new System.Drawing.Point(32, 44);
+            this.txtCompanyId.Name = "txtCompanyId";
+            this.txtCompanyId.ReadOnly = true;
+            this.txtCompanyId.Size = new System.Drawing.Size(245, 20);
+            this.txtCompanyId.TabIndex = 9;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(202, 351);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(29, 233);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 8;
             // 
             // txtContactNumber
             // 
@@ -156,6 +182,17 @@
             this.panel2.Size = new System.Drawing.Size(442, 390);
             this.panel2.TabIndex = 4;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(9, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 19);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Funcionários";
+            // 
             // btnAddEmployee
             // 
             this.btnAddEmployee.Location = new System.Drawing.Point(188, 41);
@@ -190,43 +227,6 @@
             this.grdEmployees.Name = "grdEmployees";
             this.grdEmployees.Size = new System.Drawing.Size(412, 300);
             this.grdEmployees.TabIndex = 0;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(202, 351);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // lblValidationMessage
-            // 
-            this.lblValidationMessage.AutoSize = true;
-            this.lblValidationMessage.Location = new System.Drawing.Point(29, 233);
-            this.lblValidationMessage.Name = "lblValidationMessage";
-            this.lblValidationMessage.Size = new System.Drawing.Size(0, 13);
-            this.lblValidationMessage.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(9, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 19);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Funcionários";
-            // 
-            // txtCompanyId
-            // 
-            this.txtCompanyId.AsciiOnly = true;
-            this.txtCompanyId.Location = new System.Drawing.Point(32, 44);
-            this.txtCompanyId.Name = "txtCompanyId";
-            this.txtCompanyId.ReadOnly = true;
-            this.txtCompanyId.Size = new System.Drawing.Size(245, 20);
-            this.txtCompanyId.TabIndex = 9;
             // 
             // CompanyDetailView
             // 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Button btnEditEmployee;
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.DataGridView grdEmployees;
-        private System.Windows.Forms.Label lblValidationMessage;
+        private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox txtCompanyId;
     }

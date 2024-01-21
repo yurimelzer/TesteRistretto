@@ -8,7 +8,7 @@ namespace UnitTest.CompanyTests
     public class CompanyViewTest
     {
         [TestMethod]
-        public void ApresentarErroAoEditarSemRegistros()
+        public void TheowErrorOnNullEdit()
         {
             DummyCompanyRepository repository = new DummyCompanyRepository();
             DummyCompanyView view = new DummyCompanyView();
@@ -24,7 +24,7 @@ namespace UnitTest.CompanyTests
         }
 
         [TestMethod]
-        public void ApresentarErroAoNaoDeletarRegistro()
+        public void ThrowErroOnFalseDelete()
         {
             DummyCompanyRepository repository = new DummyCompanyRepository();
             DummyCompanyView view = new DummyCompanyView();
