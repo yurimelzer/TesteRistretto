@@ -40,7 +40,6 @@ namespace TesteRistretto.Views
             set
             {
                 lblMessage.ForeColor = value ? Color.Green : Color.Red;
-                lblMessage.Text = value ? string.Empty : lblMessage.Text;
                 isSucessful = value;
             }
         }

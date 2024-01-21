@@ -237,7 +237,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "CompanyDetailView";
-            this.Text = "CompanyDetailView";
+            this.Text = "Teste Ristretto";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

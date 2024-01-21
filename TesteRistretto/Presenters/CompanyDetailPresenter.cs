@@ -34,20 +34,24 @@ namespace TesteRistretto.Presenters
 
             this.employeeBindingSource = new BindingSource();
 
-            this.view.CompanyId = company.CompanyId;
-            this.view.CompanyName = company.CompanyName;
-            this.view.ContactNumber = company.ContactNumber;
-            this.view.CompanyUrl = company.CompanyUrl;
-
             this.view.AddEmployeeEvent += AddEmployee;
             this.view.EditEmployeeEvent+= EditEmployee;
             this.view.DeleteEmployeeEvent += DeleteEmployee;
 
             this.view.SaveEvent += SaveCompany;
 
+            LoadCompanyInfo();
             LoadEmployees();
 
             this.view.ShowDialog();
+        }
+
+        private void LoadCompanyInfo()
+        {
+            this.view.CompanyId = company.CompanyId;
+            this.view.CompanyName = company.CompanyName;
+            this.view.ContactNumber = company.ContactNumber;
+            this.view.CompanyUrl = company.CompanyUrl;
         }
 
         private void LoadEmployees()
@@ -69,7 +73,8 @@ namespace TesteRistretto.Presenters
 
         private void AddEmployee(object sender, EventArgs e)
         {
-
+            IEmployeeDetailView view = new EmployeeDetailView();
+            new EmployeeDetailPresenter(view, employeeRepository, companyRepository, new Employee());
         }
 
         private void EditEmployee(object sender, EventArgs e)
@@ -82,6 +87,9 @@ namespace TesteRistretto.Presenters
                 this.view.Message = "Não há registros a serem editados!";
                 return;
             };
+
+            IEmployeeDetailView view = new EmployeeDetailView();
+            new EmployeeDetailPresenter(view, employeeRepository, companyRepository, employee);
 
             LoadEmployees();
 

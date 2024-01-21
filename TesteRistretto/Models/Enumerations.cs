@@ -8,7 +8,7 @@ namespace TesteRistretto.Models
 {
     public enum Situation
     {
-        Inactive = 0,
-        Active = 1
+        Inativo = 0,
+        Ativo = 1
     }
 }
