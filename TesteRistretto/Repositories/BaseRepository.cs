@@ -39,7 +39,7 @@ namespace TesteRistretto.Repositories
                     }
                     catch (Exception ex)
                     {
-                        throw ex;
+                        Console.WriteLine(ex.ToString());
                     }
 
                     return list;
@@ -75,7 +75,7 @@ namespace TesteRistretto.Repositories
                     }
                     catch (Exception ex)
                     {
-                        throw ex;
+                        Console.WriteLine(ex.ToString());
                     }
 
                     return entity;
@@ -107,7 +107,7 @@ namespace TesteRistretto.Repositories
                     }
                     catch (Exception ex)
                     {
-                        throw ex;
+                        Console.WriteLine(ex.ToString());
                     }
 
                     return id;
@@ -137,7 +137,7 @@ namespace TesteRistretto.Repositories
                     }
                     catch (Exception ex)
                     {
-                        throw ex;
+                        Console.WriteLine(ex.ToString());
                     }
 
                     return rowsUpdated;
@@ -167,7 +167,7 @@ namespace TesteRistretto.Repositories
                     }
                     catch (Exception ex)
                     {
-                        throw ex;
+                        Console.WriteLine(ex.ToString());
                     }
 
                     return rowsUpdated == 1;
