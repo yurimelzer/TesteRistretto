@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
 
 namespace TesteRistretto.Repositories
 {
@@ -26,9 +27,9 @@ namespace TesteRistretto.Repositories
                          + " FROM Employee "
                          + " WHERE CompanyId = @companyId";
 
-            SqlParameter[] sqlParameters = new SqlParameter[]
+            SQLiteParameter[] sqlParameters = new SQLiteParameter[]
             {
-                new SqlParameter("companyId", companyId)
+                new SQLiteParameter("companyId", companyId)
             };
 
             return GetAll(query, sqlParameters);
@@ -41,7 +42,7 @@ namespace TesteRistretto.Repositories
                          + " FROM Employee "
                          + " Where EmployeeId = @employeeId";
 
-            SqlParameter sqlParameter = new SqlParameter("employeeId", employeeId);
+            SQLiteParameter sqlParameter = new SQLiteParameter("employeeId", employeeId);
 
             return GetById(query, employeeId, sqlParameter);
         }
@@ -55,15 +56,15 @@ namespace TesteRistretto.Repositories
                          + " ( @employeeName, @email, @companyPosition, " 
                          + " @login, @password, @companyId, @situation) ";
 
-            SqlParameter[] sqlParameters = new SqlParameter[]
+            SQLiteParameter[] sqlParameters = new SQLiteParameter[]
             {
-                new SqlParameter("employeeName", employee.EmployeeName),
-                new SqlParameter("email", employee.Email),
-                new SqlParameter("companyPosition", employee.CompanyPosition),
-                new SqlParameter("login", employee.Login),
-                new SqlParameter("password", employee.Password),
-                new SqlParameter("companyId", employee.CompanyId),
-                new SqlParameter("situation", employee.Situation)
+                new SQLiteParameter("employeeName", employee.EmployeeName),
+                new SQLiteParameter("email", employee.Email),
+                new SQLiteParameter("companyPosition", employee.CompanyPosition),
+                new SQLiteParameter("login", employee.Login),
+                new SQLiteParameter("password", employee.Password),
+                new SQLiteParameter("companyId", employee.CompanyId),
+                new SQLiteParameter("situation", employee.Situation)
             };
 
             return Add(query, employee, sqlParameters);
@@ -78,16 +79,16 @@ namespace TesteRistretto.Repositories
                          + " where EmployeeId = @employeeId";
 
 
-            SqlParameter[] sqlParameters = new SqlParameter[]
+            SQLiteParameter[] sqlParameters = new SQLiteParameter[]
             {
-                new SqlParameter("employeeId", employee.EmployeeId),
-                new SqlParameter("employeeName", employee.EmployeeName),
-                new SqlParameter("email", employee.Email),
-                new SqlParameter("companyPosition", employee.CompanyPosition),
-                new SqlParameter("login", employee.Login),
-                new SqlParameter("password", employee.Password),
-                new SqlParameter("companyId", employee.CompanyId),
-                new SqlParameter("situation", employee.Situation)
+                new SQLiteParameter("employeeId", employee.EmployeeId),
+                new SQLiteParameter("employeeName", employee.EmployeeName),
+                new SQLiteParameter("email", employee.Email),
+                new SQLiteParameter("companyPosition", employee.CompanyPosition),
+                new SQLiteParameter("login", employee.Login),
+                new SQLiteParameter("password", employee.Password),
+                new SQLiteParameter("companyId", employee.CompanyId),
+                new SQLiteParameter("situation", employee.Situation)
             };
 
             return Update(query, employee, sqlParameters);
@@ -97,12 +98,12 @@ namespace TesteRistretto.Repositories
         {
             string query = "Delete from Employee where EmployeeId = @employeeId";
 
-            SqlParameter sqlParameter = new SqlParameter("employeeId", employeeId);
+            SQLiteParameter sqlParameter = new SQLiteParameter("employeeId", employeeId);
 
             return Delete(query, employeeId, sqlParameter);
         }
 
-        protected override Employee ReaderToEntity(SqlDataReader reader)
+        protected override Employee ReaderToEntity(SQLiteDataReader reader)
         {
             int employeeIdOrdinal = reader.GetOrdinal("EmployeeId");
             int employeeNameOrdinal = reader.GetOrdinal("EmployeeName");
